@@ -2,7 +2,7 @@ require 'date'
 
 class Car
 
-  #attr_reader
+  #attr_reader :name, :model, :year, :price
   #attr_accessor
 
   def initialize(make, model, year, price)
@@ -12,10 +12,11 @@ class Car
     @price = price
     @depreciation = 0.05
     @markup = 0.2
+    @damages = 0
   end
 
   def car_value
-    [@price - (@depreciation * @price * (Date.today.year - @year)),0].max
+    [@price - @damages - (@depreciation * @price * (Date.today.year - @year)),0].max
   end
 
   def car_price

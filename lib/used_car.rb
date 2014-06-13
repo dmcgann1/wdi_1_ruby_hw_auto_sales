@@ -17,11 +17,4 @@ class UsedCar < Car
     @depreciation = 0.05 + (0.000001 * @mileage)
   end
 
-  def used_car_value
-    [(car_value - @damages), 0].max
-  end
-
-  def used_car_price
-    used_car_value * (1+@markup)
-  end
 end
