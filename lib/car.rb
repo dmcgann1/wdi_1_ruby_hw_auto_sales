@@ -23,12 +23,3 @@ class Car
   end
 end
 
-
-
-#def car_price(year, price)
-# car_value(year, price)
-
-#add markup
-#returns selling price
-
-#end
